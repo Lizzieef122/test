@@ -135,7 +135,7 @@ def snipper(data, timelock, fs = 1, t2sMap = [], preTrial=10, trialLength=30,
 x = rats['PPP1.7'].sessions['s10']
 all_events = x.left['sipper']
 videofile = 'C:\\Users\\jaimeHP\\Downloads\\PPP1-171017-081744_Eelke-171027-111329_Cam2.avi'
-all_data = snipper(x, x.left['sipper'], preTrial=preTrial, trialLength=trialLength, bins=bins)
+all_data = snipper(x.data, x.left['sipper'], ts2Map=x.ts2Map, preTrial=preTrial, trialLength=trialLength, bins=bins)
 all_licks = np.concatenate((x.left['lickdata']['licks'], x.right['lickdata']['licks']), axis=0)
 
 event_number=1
